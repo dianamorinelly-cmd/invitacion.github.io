@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación para la Willey</title>
+  <title>Invitación para Willey</title>
   <!-- Fuente Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -23,18 +23,35 @@
       font-family: 'Roboto', sans-serif; /* Fuente Roboto aplicada al body */
       overflow: hidden;
       text-align: center;
+      padding: 20px;
     }
 
+    /* Primero el mensaje */
+    .message {
+      font-family: 'Roboto', sans-serif; /* Fuente Roboto aplicada al mensaje */
+      font-size: 1.5rem;
+      color: #6b623e;
+      font-weight: 600;
+      padding: 0 20px;
+      margin-bottom: 40px; /* Espacio entre el mensaje y el corazón */
+    }
+
+    /* Luego el corazón */
     .heart-container {
       width: 120px;
       height: 120px;
-      margin-bottom: 24px;
     }
 
     @media (min-width: 768px) {
       .heart-container {
         width: 250px;
         height: 250px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .message {
+        font-size: 1.3rem;
       }
     }
 
@@ -71,24 +88,13 @@
       fill: #c4b37f;
       opacity: 0;
     }
-
-    .message {
-      font-family: 'Roboto', sans-serif; /* Fuente Roboto aplicada al mensaje */
-      font-size: 1.5rem;
-      color: #6b623e;
-      margin-top: 16px;
-      font-weight: 600;
-      padding: 0 20px;
-    }
-
-    @media (max-width: 360px) {
-      .message {
-        font-size: 1.3rem;
-      }
-    }
   </style>
 </head>
 <body>
+  <!-- Primero el mensaje -->
+  <p class="message">Willey, tienes una invitación - Reservamos (1) Cupo para ti</p>
+
+  <!-- Luego el corazón -->
   <div class="heart-container">
     <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
       <path
@@ -102,7 +108,6 @@
       />
     </svg>
   </div>
-  <p class="message">Willey, tienes una invitación - Reservamos (1) Cupo para ti</p>
 
   <script>
     // Rellenar al final de los 4 segundos
@@ -110,7 +115,7 @@
       document.getElementById('fillHeart').style.opacity = '1';
     }, 4000);
 
-    // Redirigir después de 6 segundos
+    // Redirigir después de 4.1 segundos
     setTimeout(() => {
       window.location.href = "https://boda-nayeliydeivis.my.canva.site/copia-de-boda-v6";
     }, 4100);

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación para Stiven y Mari</title>
+  <!-- Fuente Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #ffffff;
+      font-family: 'Roboto', sans-serif; /* Fuente Roboto aplicada al body */
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Primero el mensaje */
+    .message {
+      font-family: 'Roboto', sans-serif; /* Fuente Roboto aplicada al mensaje */
+      font-size: 1.5rem;
+      color: #6b623e;
+      font-weight: 600;
+      padding: 0 20px;
+      margin-bottom: 40px; /* Espacio entre el mensaje y el corazón */
+    }
+
+    /* Luego el corazón */
+    .heart-container {
+      width: 120px;
+      height: 120px;
+    }
+
+    @media (min-width: 768px) {
+      .heart-container {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .message {
+        font-size: 1.3rem;
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .heart-path {
+      stroke: #c4b37f;
+      stroke-width: 4;
+      fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 4s forwards;
+    }
+
+    @keyframes draw {
+      0% {
+        stroke-dashoffset: 1000;
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        stroke-dashoffset: 0;
+        transform: scale(1);
+      }
+    }
+
+    .fill-heart {
+      fill: #c4b37f;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Primero el mensaje -->
+  <p class="message">Stiven y Mari, tienen una invitación - Reservamos (2) Cupos para ustedes.</p>
+
+  <!-- Luego el corazón -->
+  <div class="heart-container">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <path
+        class="heart-path"
+        d="M50,15 C65,0 85,0 85,20 C85,40 50,65 50,65 C50,65 15,40 15,20 C15,0 35,0 50,15 Z"
+      />
+      <path
+        class="fill-heart"
+        id="fillHeart"
+        d="M50,15 C65,0 85,0 85,20 C85,40 50,65 50,65 C50,65 15,40 15,20 C15,0 35,0 50,15 Z"
+      />
+    </svg>
+  </div>
+
+  <script>
+    // Rellenar al final de los 4 segundos
+    setTimeout(() => {
+      document.getElementById('fillHeart').style.opacity = '1';
+    }, 4000);
+
+    // Redirigir después de 4.1 segundos
+    setTimeout(() => {
+      window.location.href = "https://boda-nayeliydeivis.my.canva.site/copia-de-boda-v6";
+    }, 4100);
+  </script>
+</body>
+</html>
